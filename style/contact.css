@@ -1,0 +1,152 @@
+/* --- Base Variables (Keep consistent with other sections) --- */
+:root {
+    --bg-dark: #0b0e14;
+    --card-bg: rgba(17, 25, 40, 0.75);
+    --accent-cyan: #00d2ff;
+    --accent-purple: #9d50bb;
+    --btn-blue: #3b82f6; /* Matches your "Download CV" button */
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 100px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reusing the Section Title style from before */
+.section-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contact Container - The Large Glass Card */
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Two column layout */
+    gap: 40px;
+    padding: 50px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Text Column */
+.contact-text h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-info-list p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.contact-info-list i {
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+}
+
+/* Contact Buttons Column */
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* Specific Button Colors */
+.social-btn.linkedin { background: #0077b5; }
+.social-btn.github { background: #24292e; border: 1px solid rgba(255,255,255,0.1); }
+.social-btn.email { background: var(--btn-blue); }
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Footer Section --- */
+.main-footer {
+    padding: 40px 20px;
+    background: #07090e; /* Slightly darker than section bg */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-cyan);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* Stack on mobile */
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .contact-info-list p {
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

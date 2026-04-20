@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="font">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed | AI Engineer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/card.css">
+    <link rel = "stylesheet" href = "style/projects.css">
+    <link rel = "stylesheet" href = "style/chat-widget.css">
+    <link rel = "stylesheet" href = "style/contact.css">
+    <link rel = "stylesheet" href = "style/education.css">
+
+    
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div id="scroll-progress"></div>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-text">AS</span>
+                <div class="logo-desc">
+                    <span>Ahmed Salem</span>
+                    <span>AI Engineer</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about_me">About me</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switch">
+                <button id="lang-btn" class="btn-lang" onclick="toggleLanguage()">
+
+                    English
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="Home" class="hero-section">
+            <div class="container hero-content">
+                 <div></div>
+
+                <div class="hero-text">
+                    <h1 data-key="hero_title" class="fade-in">Hello, I'm <span class="highlight">Ahmed Salem</span></h1>
+                    <p data-key="hero_desc" class="fade-in-delay">Specialized in building end-to-end systems and Agentic
+                        AI solutions.</p>
+
+                    <div class="hero-btns fade-in-delay">
+                        <button class="btn-primary">Download CV</button>
+                        <button class="btn-secondary">View Projects</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<section id="about_me" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About the Engineer</h2>
+
+            <div class="about-grid">
+                
+                <div class="card bio-card">
+                    
+                    <h3>Who am I?</h3>
+                    <p>An AI Engineering student specialized in building smart agents and developing integrated backend systems, with experience in data analysis and UI design.</p>
+                </div>
+
+                <div class="card skills-card">
+                    <h3>Tech Arsenal</h3>
+                    <div class="skills-list" dir="ltr">
+                        <span>Python</span> 
+                        <span>FastAPI</span> 
+                        <span>LangChain</span>
+                        <span>PostgreSQL</span> 
+                        <span>C++</span> 
+                        <span>React</span>
+                        <span>SQLAlchemy</span> 
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <div class="card experience-card">
+                    <h3>Areas of Expertise</h3>
+                    <ul>
+                        <li><strong>System Building:</strong> Solid, scalable foundations.</li>
+                        <li><strong>Smart Agents:</strong> Automating complex tasks.</li>
+                    </ul>
+                </div>
+
+                <div class="card cert-card">
+                    <h3>Certifications</h3>
+                    <div class="cert-info">
+                        <strong>Prompt Engineering</strong>
+                        <p>Dubai Centre for Artificial Intelligence</p>
+                        <span class="cert-date">2026</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Selected Projects</h2>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-info">
+                            <div class="project-tag">AI Agent & RAG</div>
+                            <h3>Smart Document Analyzer (DocuMind AI)</h3>
+                            <p>An advanced system relying on **RAG** technology to analyze PDF files and interact with
+                                them in real-time. Allows users to extract accurate information through smart
+                                conversation with the system.</p>
+
+                            <div class="project-tech-stack" dir="ltr">
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">LangChain</span>
+                                <span class="tech-badge">Vector DB</span>
+                                <span class="tech-badge">Gemini API</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="#" class="btn-small">View Code <i class="fab fa-github"></i></a>
+                                <a href="#" class="btn-small secondary">Live Demo</a>
+                            </div>
+                        </div>
+
+                        <div class="project-visual">
+                            <div class="image-wrapper">
+                                <img src="images/p1.png" alt="Smart Document Analyzer Interface">
+                                <div class="image-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="Education" class="education-section">
+            <div class="container">
+                <h2 class="section-title">Academic Path</h2>
+
+                <div class="edu-card card fade-in">
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i> <span class="status-badge">Currently Studying</span>
+                    </div>
+
+                    <div class="edu-info">
+                        <h3>B.Sc. in Artificial Intelligence Engineering</h3>
+                        <p class="university-name">University of Science and Technology</p>
+
+                        <div class="edu-meta">
+                            <span class="edu-date"><i class="far fa-calendar-alt"></i> 2024 — 2028</span>
+                            <span class="edu-location"><i class="fas fa-map-marker-alt"></i> yemen - hadrmots</span>
+                        </div>
+
+                        <div class="edu-details">
+                            <p>Special focus on: Machine Learning, Agentic AI, and Backend Development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-container card">
+                    <div class="contact-text">
+                        <h3>Have a project or an idea?</h3>
+                        <p>I'm always available to discuss AI technologies, job opportunities, or just to exchange
+                            programming experiences.</p>
+                        <div class="contact-info-list">
+                            <p><i class="fas fa-envelope"></i> ahmed.salem@example.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Abu Dhabi, United Arab Emirates</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="https://linkedin.com/in/your-profile" class="social-btn linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/your-username" class="social-btn github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:your-email@example.com" class="social-btn email">
+                            <i class="fas fa-paper-plane"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>© 2026 Ahmed Salem | AI Engineer</p>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about_me">About Me</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+
+
+ <aside id="chat-widget" class="chat-container">
+        <div id="chat-trigger" class="chat-trigger">
+            <i class="fas fa-robot"></i>
+        </div>
+
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <div class="bot-info">
+                    <div class="bot-status"></div>
+                    <span>Ahmed's Smart Assistant</span>
+                </div>
+                <button id="close-chat">&times;</button>
+            </div>
+
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-msg">
+                    Hello! I'm Ahmed's AI agent. How can I assist you today?
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Ask me about Ahmed's projects...">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</main> 
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis for smooth scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scroll-progress');
+            const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scroll = (totalScroll / windowHeight) * 100;
+            if (scrollProgress) {
+                scrollProgress.style.width = scroll + '%';
+            }
+        });
+    </script>
+</body>

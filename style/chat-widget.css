@@ -1,0 +1,261 @@
+/* ==========================================================================
+   ENHANCED CHAT WIDGET: CYBER-GLASS DESIGN
+   Designed for: Ahmed Salem's AI Portfolio
+   ========================================================================== */
+
+:root {
+    /* Color Palette derived from the portfolio theme image */
+    --accent-cyan: #00d2ff;     /* Left end of your name's gradient */
+    --accent-purple: #9d50bb;   /* Right end of your name's gradient */
+    --primary-gradient: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    
+    /* Backgrounds and Borders */
+    --glass-bg: rgba(10, 15, 25, 0.88); /* Deep dark glass, high contrast */
+    --glass-border: rgba(255, 255, 255, 0.08); /* Minimal border */
+    
+    /* Typography and Accents */
+    --text-main: #fcfdfe; /* Purest white for readability */
+    --text-dim: #9ca3af;  /* Neutral dim gray */
+    --bot-msg-bg: rgba(255, 255, 255, 0.04); /* Subtle distinction for bot messages */
+    
+    /* Replicating the button blue from "Download CV" but brighter for usability */
+    --user-btn-bg: #4f46e5; /* Indigo */
+    --user-btn-glow: rgba(79, 70, 229, 0.35);
+}
+
+/* Base Widget Container */
+.chat-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    font-family: 'Inter', system-ui, sans-serif; /* Clean, professional font */
+}
+
+/* Floating Action Button (FAB) Trigger */
+.chat-trigger {
+    width: 65px; /* Slightly larger */
+    height: 65px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(157, 80, 187, 0.3); /* Integrated glow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Prevents hard edge */
+}
+
+.chat-trigger i {
+    color: white;
+    font-size: 1.7rem; /* Larger icon */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chat-trigger:hover {
+    transform: scale(1.1) translateY(-5px) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(157, 80, 187, 0.4);
+}
+
+/* The Main Chat Window */
+.chat-window {
+    position: absolute;
+    bottom: 85px; /* Increased offset */
+    right: 0;
+    width: 380px; /* Slightly wider */
+    height: 520px; /* Slightly taller */
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px) saturate(180%); /* Enhanced clarity and color */
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px; /* More rounded */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: bottom right;
+}
+
+/* Hidden state animation */
+.chat-window.hidden {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px); /* More pronounced entry */
+    pointer-events: none;
+}
+
+/* Chat Header */
+.chat-header {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02); /* Very subtle texture */
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-info span {
+    color: var(--text-main);
+    font-weight: 700; /* Bolder text for visibility */
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+}
+
+/* Enhanced Bot Status Indicator */
+.bot-status {
+    width: 10px;
+    height: 10px;
+    background: #10b981; /* Tailwind Success Green */
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid var(--glass-bg); /* Prevents blend-in */
+}
+
+/* A separate pulsing ring around the status */
+.bot-status::after {
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px; bottom: -5px; right: -5px;
+    border-radius: 50%;
+    border: 2px solid #10b981;
+    opacity: 0;
+    animation: ringPulse 2s infinite;
+}
+
+@keyframes ringPulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.6); }
+}
+
+#close-chat {
+    background: rgba(255,255,255,0.05); /* Make it feel like a button */
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#close-chat:hover { 
+    color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+/* Messages Area */
+.chat-messages {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Slightly more space between messages */
+}
+
+/* Custom Minimal Scrollbar */
+.chat-messages::-webkit-scrollbar { width: 5px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb { 
+    background: var(--glass-border); 
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+.chat-messages::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+/* Message Bubble Base */
+.message {
+    max-width: 82%; /* Slightly thinner bubbles for a tighter layout */
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* Bot Message Styling */
+.bot-msg {
+    align-self: flex-start;
+    background: var(--bot-msg-bg);
+    color: var(--text-main);
+    border-bottom-left-radius: 4px; /* Clean tail */
+    border: 1px solid var(--glass-border);
+}
+
+/* Added Styling for User Messages (Assuming you add .user-msg later) */
+.user-msg {
+    align-self: flex-end;
+    background: var(--user-btn-bg);
+    color: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 12px var(--user-btn-glow);
+}
+
+/* Input Area */
+.chat-input-area {
+    padding: 24px;
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.1); /* Darker footer */
+}
+
+#user-input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3); /* Dark, nested input */
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 12px 18px;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#user-input:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-cyan); /* Minimal accent highlight */
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.15);
+}
+
+#user-input::placeholder {
+    color: var(--text-dim);
+    opacity: 0.8;
+}
+
+/* Send Button Styling */
+#send-btn {
+    background: var(--primary-gradient); /* Use the main theme gradient */
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; align-items: center; justify-content: center;
+}
+
+#send-btn i {
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+#send-btn:hover {
+    box-shadow: 0 6px 15px rgba(157, 80, 187, 0.3);
+}
+
+#send-btn:hover i {
+    transform: translateX(2px) rotate(-10deg); /* Playful hover */
+}
