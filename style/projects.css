@@ -154,6 +154,7 @@
 }
 
 .btn-small {
+    z-index: 2;
     padding: 10px 20px;
     border-radius: 10px;
 
@@ -166,13 +167,11 @@
     transition: 
         background 0.25s ease,
         transform 0.2s ease;
+
+    text-decoration: none;
+
 }
 
-.btn-small.secondary {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: rgba(226, 232, 240, 0.8);
-}
 
 .btn-small:hover {
     background: rgba(79, 140, 255, 1);

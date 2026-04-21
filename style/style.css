@@ -9,6 +9,14 @@
 }
 
 
+.hero-btns a,
+.hero-btns a:link,
+.hero-btns a:visited,
+.hero-btns a:hover,
+.hero-btns a:active {
+    text-decoration: none;
+}
+
 
 
 .font {
@@ -253,6 +261,7 @@ section {
     display: flex;
     gap: 20px;
     justify-content: center;
+    
 }
 
 .btn-primary {
