@@ -172,6 +172,32 @@
 
 }
 
+.btn-small-second {
+
+    z-index: 2;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    background: rgba(53, 52, 52, 0);
+    color: white;
+
+    transition: 
+        background 0.25s ease,
+        transform 0.2s ease;
+
+    text-decoration: none;
+
+}
+
+.btn-small-second:hover {
+ background: rgba(61, 61, 61, 0.303);
+    transform: translateY(-2px);
+}
+
+
 
 .btn-small:hover {
     background: rgba(79, 140, 255, 1);

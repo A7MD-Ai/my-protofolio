@@ -154,6 +154,7 @@ section {
 
 /* زر اللغة */
 .btn-lang {
+    display: inline-block ;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
@@ -164,15 +165,14 @@ section {
     align-items: center;
     gap: 8px;
     transition: 0.3s;
+    text-decoration: none;
 }
+
 
 .btn-lang:hover {
     background: rgba(0, 212, 255, 0.1);
     border-color: var(--primary-blue);
 }
-
-
-
 
 
 

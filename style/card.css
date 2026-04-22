@@ -184,3 +184,20 @@
     line-height: 1.7;
     font-size: 0.95rem;
 }
+
+.card-ar pre {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #e2e8f0;
+    font-size: 1.4rem; /* 👈 medium size */
+}
+.card-en pre {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'Cairo', sans-serif;
+    color: #e2e8f0;
+    font-size: 1.4rem; /* 👈 medium size */
+}

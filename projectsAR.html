@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="font" lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد | معرض أعمال مهندس ذكاء اصطناعي</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style/card.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/chat-widget.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/education.css">
+    <link rel="stylesheet" href="style/markquee.css">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div id="scroll-progress"></div>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-text">AS</span>
+                <div class="logo-desc">
+                    <span>أحمد سالم</span>
+                    <span>مهندس ذكاء اصطناعي</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#Overview">نظرة عامة</a></li>
+                    <li><a href="#Problem">المشكلة</a></li>
+                    <li><a href="#Solution">الحل</a></li>
+                    <li><a href="#TechStack">التقنيات المستخدمة</a></li>
+                    <li><a href="#Contact">تواصل</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switch">
+                
+            <div class="lang-switch">
+                    <a href="projects.html"  class="btn-lang" >English</a>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+
+        <section id="Home" class="hero-section">
+            <div class="container hero-content">
+                <div></div>
+
+                <div class="hero-text">
+                    <h1 class="fade-in highlight">DocuMind AI</h1>
+                    <p class="fade-in-delay">مساعد ذكي للتعامل مع المستندات.</p>
+
+                    <div class="hero-btns fade-in-delay">
+                        <a href="index.html" target="_self" class="btn-primary">
+                            رجوع
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Overview" class="about-section">
+            <div class="container">
+                <h1 class="section-title">نظرة عامة</h1>
+
+                <div class="card bio-card card-ar">
+                    <pre>
+DocuMind AI هو مساعد ذكي للمستندات تم تصميمه لمساعدة المستخدمين
+على استخراج المعلومات وفهمها والتفاعل معها من مجموعات بيانات نصية كبيرة.
+تم بناؤه باستخدام بنية حديثة Full-Stack،
+ويعتمد على تقنية RAG (الاسترجاع المعزز بالتوليد) لتقديم إجابات دقيقة
+ومبنية على السياق.
+يجمع النظام بين واجهة React وخلفية FastAPI،
+مما يتيح تفاعلًا سلسًا مع تحليل المستندات باستخدام الذكاء الاصطناعي.
+                    </pre>
+                </div>
+        </section>
+
+        <section id="Problem" class="about-section">
+            <div class="container">
+                <h1 class="section-title">المشكلة</h1>
+
+                <div class="card bio-card card-ar">
+                    <pre>
+الطرق التقليدية للبحث داخل المستندات تستغرق وقتًا طويلًا وغير فعالة،
+خاصة عند التعامل مع كميات كبيرة من البيانات غير المنظمة.
+غالبًا ما يواجه المستخدمون صعوبة في العثور على معلومات دقيقة بسرعة،
+كما أن أنظمة البحث المعتمدة على الكلمات المفتاحية تفشل في فهم السياق،
+مما يؤدي إلى نتائج غير دقيقة.
+                    </pre>
+                </div>
+        </section>
+
+        <section id="Solution" class="about-section">
+            <div class="container">
+                <h1 class="section-title">الحل</h1>
+
+                <div class="card bio-card card-ar">
+                    <pre>
+يعالج DocuMind AI هذه المشكلة من خلال تطبيق نظام يعتمد على RAG
+مدعومًا بقاعدة بيانات متجهية (Vector Database).
+يتم معالجة المستندات وتحويلها إلى تمثيلات متجهية وتخزينها،
+مما يتيح البحث الدلالي بدلًا من البحث بالكلمات فقط.
+عند إدخال استفسار، يقوم النظام بجلب الأجزاء الأكثر صلة من المستندات
+وتمريرها إلى نموذج لغوي عبر Gemini API،
+لتوليد إجابات دقيقة ومبنية على السياق.
+هذا الأسلوب يحسن بشكل كبير كفاءة البحث وتجربة المستخدم.
+                    </pre>
+                </div>
+        </section>
+
+        <section id="TechStack" class="about-section">
+            <div class="container">
+                <h1 class="section-title">التقنيات المستخدمة</h1>
+
+                <div class="card bio-card card-ar">
+                    <pre>
+تم بناء الخلفية باستخدام FastAPI،
+مع استخدام SQLAlchemy كـ ORM و PostgreSQL كقاعدة بيانات.
+يتم استخدام Pydantic للتحقق من صحة البيانات وضمان تكاملها.
+كما تم دمج LangChain لإدارة نظام RAG والتفاعل مع Gemini API.
+في الواجهة الأمامية، يوفر React واجهة ديناميكية وسريعة الاستجابة،
+مما يضمن تواصلًا سلسًا مع خدمات الخلفية.
+                    </pre>
+                </div>
+        </section>
+
+        <section id="Contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">دعنا نتواصل</h2>
+                <div class="contact-container card">
+                    <div class="contact-text">
+                        <h3>هل لديك مشروع أو فكرة؟</h3>
+                        <p>أنا متاح دائمًا لمناقشة تقنيات الذكاء الاصطناعي، فرص العمل، أو تبادل الخبرات البرمجية.</p>
+                        <div class="contact-info-list">
+                            <p><i class="fas fa-envelope"></i> Ahmadsalem7.am@gmail.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> أبوظبي، الإمارات العربية المتحدة</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="https://www.linkedin.com/in/ahmed-salem-saeed-55a34a296" class="social-btn linkedin">
+                            <i class="fab fa-linkedin"></i> لينكدإن
+                        </a>
+                        <a href="https://github.com/A7MD-Ai" class="social-btn github">
+                            <i class="fab fa-github"></i> جيت هب
+                        </a>
+                        <a href="mailto:Ahmadsalem7.am@gmail.com" class="social-btn email">
+                            <i class="fas fa-paper-plane"></i> إرسال بريد
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>© 2026 أحمد سالم | مهندس ذكاء اصطناعي</p>
+                    <div class="footer-links">
+                        <a href="#Home">الرئيسية</a>
+                        <a href="#About">من أنا</a>
+                        <a href="#projects">المشاريع</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </main>
+
+</body>
+</html>
