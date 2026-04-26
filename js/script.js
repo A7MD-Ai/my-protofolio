@@ -31,7 +31,7 @@ async function sendMessage() {
     const loadingMsg = addMessage("...", "bot-msg");
 
     try {
-        const response = await fetch("http://localhost:8000/api/chat/", {
+        const response = await fetch("https://chatbot-0j8y.onrender.com/api/chat/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
