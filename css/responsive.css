@@ -1,0 +1,533 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN — All Screens
+   Breakpoints: 1200px / 992px / 768px / 576px / 400px
+   ========================================================================== */
+
+/* ── Hamburger Menu Button (hidden by default) ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger X animation when open */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ── Mobile nav overlay (hidden by default) ── */
+.mobile-nav-overlay {
+    visibility: hidden;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   TABLET & SMALL LAPTOP  (max-width: 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+/* ==========================================================================
+   TABLET  (max-width: 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+
+    /* ── Header ── */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 280px;
+        height: 100vh;
+        background: rgba(11, 14, 20, 0.97);
+        backdrop-filter: blur(25px);
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+        z-index: 1050;
+        padding: 100px 30px 40px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: none;
+        left: auto;
+    }
+
+    [dir="rtl"] .nav-links {
+        right: auto;
+        left: -300px;
+        border-left: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    [dir="rtl"] .nav-links.active {
+        right: auto;
+        left: 0;
+    }
+
+    .mobile-nav-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 16px 0;
+        font-size: 1.05rem;
+        border-bottom: none;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+        padding-left: 10px;
+    }
+
+    /* ── Hero ── */
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    /* ── Projects ── */
+    .project-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .project-visual {
+        min-width: 0;
+    }
+
+    /* ── Marquee ── */
+    .marquee {
+        --item-width: 90px;
+        --item-gap: 40px;
+    }
+
+    .fadeout-horizontal::before,
+    .fadeout-horizontal::after {
+        width: 200px;
+    }
+}
+
+
+/* ==========================================================================
+   SMALL TABLET / LARGE PHONE  (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* ── Header ── */
+    .header-content {
+        height: 65px;
+        padding: 0 4%;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .logo-desc {
+        font-size: 0.8rem;
+    }
+
+    .lang-switch .btn-lang {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* ── Hero ── */
+    .hero-section {
+        height: auto;
+        min-height: 80vh;
+        padding: 100px 5% 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .hero-btns a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* ── About Section ── */
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .card h3 {
+        font-size: 1.15rem;
+    }
+
+    /* ── Projects Section ── */
+    .projects-section {
+        padding: 60px 5%;
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+
+    .project-content {
+        gap: 30px;
+    }
+
+    .project-info {
+        min-width: 0;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+    }
+
+    .project-visual {
+        min-width: 0;
+    }
+
+    /* ── Education ── */
+    .edu-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ── Contact Section ── */
+    .contact-section {
+        padding: 60px 5%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .contact-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info-list p {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    /* ── Footer ── */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    /* ── Marquee ── */
+    .marquee {
+        --item-width: 70px;
+        --item-gap: 30px;
+        padding: 20px 0;
+    }
+
+    .fadeout-horizontal::before,
+    .fadeout-horizontal::after {
+        width: 100px;
+    }
+
+    /* ── Chat Widget ── */
+    .chat-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chat-trigger {
+        width: 55px;
+        height: 55px;
+    }
+
+    .chat-trigger i {
+        font-size: 1.4rem;
+    }
+
+    .chat-window {
+        width: calc(100vw - 40px);
+        max-width: 380px;
+        height: 450px;
+        bottom: 75px;
+        right: 0;
+    }
+
+    /* ── Pre tags in project pages ── */
+    .card-en pre,
+    .card-ar pre {
+        font-size: 1.1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}
+
+
+/* ==========================================================================
+   PHONE  (max-width: 576px)
+   ========================================================================== */
+@media (max-width: 576px) {
+
+    /* ── Hero ── */
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    /* ── Cards ── */
+    .card {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .skills-list span {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    /* ── Projects ── */
+    .project-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-tag {
+        font-size: 0.65rem;
+    }
+
+    .tech-badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-small,
+    .btn-small-second {
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+
+    /* ── Contact ── */
+    .contact-container {
+        padding: 24px 16px;
+    }
+
+    .contact-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .social-btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* ── Chat Widget ── */
+    .chat-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .chat-trigger {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-window {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: 85vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .chat-header {
+        padding: 18px;
+    }
+
+    .chat-messages {
+        padding: 16px;
+    }
+
+    .chat-input-area {
+        padding: 16px;
+    }
+
+    /* ── Pre tags ── */
+    .card-en pre,
+    .card-ar pre {
+        font-size: 0.95rem;
+    }
+
+    /* ── Marquee ── */
+    .marquee {
+        --item-width: 55px;
+        --item-gap: 20px;
+    }
+
+    .fadeout-horizontal::before,
+    .fadeout-horizontal::after {
+        width: 60px;
+    }
+}
+
+
+/* ==========================================================================
+   VERY SMALL PHONE  (max-width: 400px)
+   ========================================================================== */
+@media (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .logo-desc {
+        display: none;
+    }
+
+    .header-content {
+        height: 55px;
+    }
+
+    .card {
+        padding: 18px 14px;
+    }
+
+    .project-info h3 {
+        font-size: 1.15rem;
+    }
+}

@@ -1,0 +1,362 @@
+.root {
+  --bg-main: #0b0f19;
+  --color-primary: #4f8cff;
+  --color-secondary-start: #6a5cff;
+  --color-secondary-end: #a855f7;
+  --text-main: #e6eaf2;
+  --text-muted: #9aa4b2;
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+.hero-btns a,
+.hero-btns a:link,
+.hero-btns a:visited,
+.hero-btns a:hover,
+.hero-btns a:active {
+  text-decoration: none;
+}
+
+.font {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  color: #ffffff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b0f19;
+
+  background-image:
+        /* subtle top light */
+    radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(79, 140, 255, 0.06),
+      transparent 60%
+    ),
+    /* subtle corner depth */
+    radial-gradient(
+        1000px 500px at 90% 10%,
+        rgba(168, 85, 247, 0.05),
+        transparent 70%
+      ),
+    /* gentle vertical fade */
+    linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02),
+        transparent 20%,
+        transparent 80%,
+        rgba(0, 0, 0, 0.2)
+      );
+
+  background-attachment: fixed;
+  color: var(--text-main);
+}
+
+section {
+  background: transparent;
+}
+
+.section-title {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(11, 14, 20, 0);
+  /* أسود شفاف */
+  backdrop-filter: blur(12px);
+  /* تأثير الزجاج الضبابي */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#scroll-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(79, 140, 255, 0.5),
+    transparent
+  );
+  width: 0%;
+  z-index: 1001;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 5%;
+}
+
+/* الشعار */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00d4ff, #9d50bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-desc {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  border-right: 1px solid var(--primary-blue);
+  padding-right: 12px;
+  display: grid;
+}
+
+/* روابط التنقل */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: var(--primary-blue);
+  text-shadow: 0 0 8px rgba(0, 213, 255, 0.899);
+  border-bottom-color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+/* زر اللغة */
+.btn-lang {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-lang:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--primary-blue);
+}
+
+/* تنسيق قسم الهيرو */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+/* النص الرئيسي */
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #00d4ff, #9d50bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* تأثير التوهج في الخلفية */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(157, 80, 187, 0.15) 0%,
+    rgba(0, 212, 255, 0.1) 50%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+  animation:
+    slow-float 8s ease-in-out infinite,
+    pulse-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes slow-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-52%, -55%);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* تنسيق الأزرار */
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #4f8cff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-primary:hover {
+  background: #3b73e0;
+  transform: translateY(-2px);
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-blue {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(0, 212, 255, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+  }
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

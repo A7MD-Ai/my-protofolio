@@ -3,8 +3,6 @@
 
 <head>
 
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed | AI Engineer Portfolio</title>
@@ -14,19 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/card.css">
-    <link rel = "stylesheet" href = "style/projects.css">
-    <link rel = "stylesheet" href = "style/chat-widget.css">
-    <link rel = "stylesheet" href = "style/contact.css">
-    <link rel = "stylesheet" href = "style/education.css">
-    <link rel = "stylesheet" href = "style/markquee.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel = "stylesheet" href="css/projects.css">
+    <link rel = "stylesheet" href="css/chat-widget.css">
+    <link rel = "stylesheet" href="css/contact.css">
 
+    <link rel = "stylesheet" href="css/markquee.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
-
 
     <header class="main-header">
         <div id="scroll-progress"></div>
@@ -53,13 +50,17 @@
             <div class="lang-switch">
                     <a href="projectsAR.html"  class="btn-lang" >العربية</a>
             </div>
-   
 
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
     </header>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
     <main>
-
 
 <section id="Home" class="hero-section">
             <div class="container hero-content">
@@ -74,17 +75,10 @@
                             Return
                         </a>
 
-                        
                     </div>
                 </div>
             </div>
         </section>
-        
-
-
-
-
-
 
 <section id="Overview" class="about-section">
         <div class="container">
@@ -93,21 +87,12 @@
             <div>
                 
                 <div class="card bio-card card-en">
-                    
-                    
-                    <pre>
-DocuMind AI is an intelligent document assistant designed to help users extract, understand, and
-interact with information from large text datasets.Built using a modern full-stack architecture, 
-it leverages Retrieval-Augmented Generation (RAG) to provide accurate,context-aware responses.
-The system integrates a React-based frontend with a FastAPI backend,
-enabling seamless user interaction with AI-powered document analysis.
-                    </pre>
+
+                    <pre>DocuMind AI is an intelligent document assistant designed to help users extract, understand, and interact with information from large text datasets. Built using a modern full-stack architecture, it leverages Retrieval-Augmented Generation (RAG) to provide accurate, context-aware responses. The system integrates a React-based frontend with a FastAPI backend, enabling seamless user interaction with AI-powered document analysis.</pre>
                 </div>
-
-                
+            </div>
+        </div>
     </section>
-
-
 
 <section id="Problem" class="about-section">
         <div class="container">
@@ -116,20 +101,12 @@ enabling seamless user interaction with AI-powered document analysis.
             <div>
                 
                 <div class="card bio-card card-en">
-                    
-                    
-                    <pre>
-Traditional methods of searching through documents are time-consuming and inefficient,
-especially when dealing with large volumes of unstructured data.
-Users often struggle to find precise information quickly,
-and standard keyword-based search systems fail to capture context or meaning,
-leading to irrelevant results.
-                    </pre>
+
+                    <pre>Traditional methods of searching through documents are time-consuming and inefficient, especially when dealing with large volumes of unstructured data. Users often struggle to find precise information quickly, and standard keyword-based search systems fail to capture context or meaning, leading to irrelevant results.</pre>
                 </div>
-
-                
+            </div>
+        </div>
     </section>
-
 
 <section id="Solution" class="about-section">
         <div class="container">
@@ -138,24 +115,12 @@ leading to irrelevant results.
             <div>
                 
                 <div class="card bio-card card-en">
-                    
-                    
-                    <pre>
-DocuMind AI addresses this challenge by implementing
-a RAG-based pipeline combined with
-a vector database. Documents are processed,embedded,
-and stored in a vectorDB, allowing semantic search instead of simple keyword matching.
-When a user submits a query, the system retrieves 
-the most relevant document chunks and feeds them into a language model via the Gemini API,
-generating accurate and context-aware answers.
-This approach significantly improves information retrieval efficiency and user experience.
-                    </pre>
+
+                    <pre>DocuMind AI addresses this challenge by implementing a RAG-based pipeline combined with a vector database. Documents are processed, embedded, and stored in a vectorDB, allowing semantic search instead of simple keyword matching. When a user submits a query, the system retrieves the most relevant document chunks and feeds them into a language model via the Gemini API, generating accurate and context-aware answers. This approach significantly improves information retrieval efficiency and user experience.</pre>
                 </div>
-
-                
+            </div>
+        </div>
     </section>
-
-
 
 <section id="TechStack" class="about-section">
         <div class="container">
@@ -164,23 +129,12 @@ This approach significantly improves information retrieval efficiency and user e
             <div>
                 
                 <div class="card bio-card card-en">
-                    
-                    
-                    <pre>
-The backend is built with FastAPI,
-utilizing SQLAlchemy as the ORM and PostgreSQL as the relational database.
-Pydantic is used for schema validation to ensure data integrity. 
-LangChain is integrated to orchestrate the RAG pipeline and manage interactions with the Gemini API.
-On the frontend, React provides a dynamic and responsive user interface, 
-enabling smooth communication with the backend services.
-                    </pre>
+
+                    <pre>The backend is built with FastAPI, utilizing SQLAlchemy as the ORM and PostgreSQL as the relational database. Pydantic is used for schema validation to ensure data integrity. LangChain is integrated to orchestrate the RAG pipeline and manage interactions with the Gemini API. On the frontend, React provides a dynamic and responsive user interface, enabling smooth communication with the backend services.</pre>
                 </div>
-
-                
+            </div>
+        </div>
     </section>
-
-
-
 
         <section id="Contact" class="contact-section">
             <div class="container">
@@ -211,12 +165,6 @@ enabling smooth communication with the backend services.
             </div>
         </section>
 
-
-        
-        
-
-
-
         <footer class="main-footer">
             <div class="container">
                 <div class="footer-content">
@@ -230,13 +178,9 @@ enabling smooth communication with the backend services.
             </div>
         </footer>
     
-
-
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/script.js"></script>
 </main> 
-
-
-
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
@@ -260,7 +204,7 @@ enabling smooth communication with the backend services.
 
         requestAnimationFrame(raf);
 
-        // Scroll Progress Bar
+    // Scroll Progress Bar
         window.addEventListener('scroll', () => {
             const scrollProgress = document.getElementById('scroll-progress');
             const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -270,5 +214,35 @@ enabling smooth communication with the backend services.
                 scrollProgress.style.width = scroll + '%';
             }
         });
+
+        // Mobile Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const overlay = document.getElementById('mobile-nav-overlay');
+
+        if (hamburger && navLinks && overlay) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+
+            overlay.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
     </script>
 </body>

@@ -259,3 +259,52 @@
 #send-btn:hover i {
     transform: translateX(2px) rotate(-10deg); /* Playful hover */
 }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN FOR CHAT WIDGET
+   ========================================================================== */
+@media (max-width: 576px) {
+    .chat-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-trigger {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .chat-trigger i {
+        font-size: 1.4rem;
+    }
+
+    .chat-window {
+        width: 300px;
+        max-width: calc(100vw - 30px);
+        height: 380px;
+        max-height: 50vh;
+        bottom: 65px;
+    }
+    
+    .chat-header {
+        padding: 16px 20px;
+    }
+    
+    .chat-header h4 {
+        font-size: 0.95rem;
+    }
+    
+    .chat-input-area {
+        padding: 16px;
+    }
+    
+    #user-input {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+    
+    #send-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

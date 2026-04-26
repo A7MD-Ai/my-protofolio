@@ -1,34 +1,17 @@
-/* --- Base Variables (Keep consistent with other sections) --- */
-:root {
-    --bg-dark: #0b0e14;
-    --card-bg: rgba(17, 25, 40, 0.75);
-    --accent-cyan: #00d2ff;
-    --accent-purple: #9d50bb;
-    --btn-blue: #3b82f6; /* Matches your "Download CV" button */
-    --text-main: #f8fafc;
-    --text-dim: #94a3b8;
-}
+/* Uses shared :root variables from style.css */
+
 
 /* --- Contact Section --- */
 .contact-section {
-    padding: 100px 20px;
+    padding: 100px 5%;
     font-family: 'Inter', sans-serif;
 }
 
-/* Reusing the Section Title style from before */
-.section-title {
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+/* .section-title is defined in card.css */
+
 
 /* Contact Container - The Large Glass Card */
 .contact-container {
-    max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr; /* Two column layout */
@@ -93,7 +76,7 @@
 /* Specific Button Colors */
 .social-btn.linkedin { background: #0077b5; }
 .social-btn.github { background: #24292e; border: 1px solid rgba(255,255,255,0.1); }
-.social-btn.email { background: var(--btn-blue); }
+.social-btn.email { background: #019aff; }
 
 .social-btn:hover {
     transform: translateY(-3px);
