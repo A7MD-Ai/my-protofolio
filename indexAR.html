@@ -41,9 +41,12 @@
                 <li><a href="#projects">المشاريع</a></li>
                 <li><a href="#Contact">تواصل</a></li>
             </ul>
+            <div class="lang-switch mobile-only">
+                <a href="index.html" class="btn-lang">English</a>
+            </div>
         </nav>
 
-        <div class="lang-switch">
+        <div class="lang-switch desktop-only">
             <a href="index.html" class="btn-lang">English</a>
         </div>
 
@@ -214,6 +217,13 @@
                         <a href="projectsAR.html" class="btn-small-second">مزيد من التفاصيل</a>
                     </div>
                 </div>
+
+                <div class="project-visual">
+                    <div class="image-wrapper">
+                        <img src="images/p1.png" alt="واجهة محلل المستندات الذكي">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
             </div>
         </article>
     </div>
@@ -297,12 +307,12 @@
         <div class="chat-header">
             <div class="bot-info">
                 <div class="bot-status"></div>
-            <span>مساعد أحمد الذكي</span>
-            <button id="close-chat">&times;</button>
+                <span>مساعد أحمد الذكي</span>
             </div>
+            <button id="close-chat">&times;</button>
         </div>
 
-        <div id="chat-messages" class="chat-messages">
+        <div id="chat-messages" class="chat-messages" data-lenis-prevent>
             <div class="message bot-msg">
                 مرحبًا! أنا وكيل أحمد الذكي، كيف يمكنني مساعدتك؟
             </div>
@@ -319,7 +329,7 @@
 </main>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
-    // Initialize Lenis for smooth scrolling
+
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -339,7 +349,7 @@
 
     requestAnimationFrame(raf);
 
-    // Scroll Progress Bar
+
     window.addEventListener('scroll', () => {
         const scrollProgress = document.getElementById('scroll-progress');
         const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -350,7 +360,7 @@
         }
     });
 
-    // Mobile Hamburger Menu
+
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
     const overlay = document.getElementById('mobile-nav-overlay');

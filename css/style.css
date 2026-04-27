@@ -37,19 +37,19 @@ body {
   background-color: #0b0f19;
 
   background-image:
-        /* subtle top light */
+        
     radial-gradient(
       1200px 600px at 50% -10%,
       rgba(79, 140, 255, 0.06),
       transparent 60%
     ),
-    /* subtle corner depth */
+    
     radial-gradient(
         1000px 500px at 90% 10%,
         rgba(168, 85, 247, 0.05),
         transparent 70%
       ),
-    /* gentle vertical fade */
+    
     linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.02),
@@ -80,9 +80,9 @@ section {
   width: 100%;
   z-index: 1000;
   background: rgba(11, 14, 20, 0);
-  /* أسود شفاف */
+  
   backdrop-filter: blur(12px);
-  /* تأثير الزجاج الضبابي */
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -111,7 +111,7 @@ section {
   padding: 0 5%;
 }
 
-/* الشعار */
+
 .logo {
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@ section {
   display: grid;
 }
 
-/* روابط التنقل */
+
 .nav-links {
   position: absolute;
   left: 50%;
@@ -164,7 +164,11 @@ section {
   transform: translateY(-2px);
 }
 
-/* زر اللغة */
+
+.mobile-only {
+  display: none !important;
+}
+
 .btn-lang {
   display: inline-block;
   background: rgba(255, 255, 255, 0.05);
@@ -185,7 +189,7 @@ section {
   border-color: var(--primary-blue);
 }
 
-/* تنسيق قسم الهيرو */
+
 .hero-section {
   position: relative;
   height: 100vh;
@@ -200,7 +204,7 @@ section {
   z-index: 2;
 }
 
-/* النص الرئيسي */
+
 .hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -221,7 +225,7 @@ section {
   margin: 0 auto 40px auto;
 }
 
-/* تأثير التوهج في الخلفية */
+
 .hero-glow {
   position: absolute;
   top: 50%;
@@ -263,7 +267,7 @@ section {
   }
 }
 
-/* تنسيق الأزرار */
+
 .hero-btns {
   display: flex;
   gap: 20px;
@@ -339,7 +343,7 @@ section {
   }
 }
 
-/* Lenis Smooth Scroll Recommended CSS */
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -360,3 +364,4 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+

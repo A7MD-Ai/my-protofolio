@@ -7,7 +7,7 @@
     --text-dim: #94a3b8;
 }
 
-/* Section Setup */
+
 .about-section {
     padding: 80px 20px;
     font-family: 'Inter', sans-serif;
@@ -17,9 +17,9 @@
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 28px;
-    max-width: 1200px; /* match project cards container */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
@@ -28,7 +28,7 @@
         grid-template-columns: 1fr;
     }
 }
-/* Futuristic Card Style */
+
 
 .card {
     background: rgba(255, 255, 255, 0.025);
@@ -52,7 +52,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
-/* Glowing Border Effect on Hover */
+
 
 
 .card:hover {
@@ -92,7 +92,7 @@
 
 
 
-/* Skills Tags - "Cyber" Style */
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +113,7 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Expertise List */
+
 .experience-card ul {
     list-style: none;
     padding: 0;
@@ -177,7 +177,7 @@
     margin: 0 auto;
 }
 
-/* Center the bio-card content on project detail pages */
+
 .card.bio-card.card-en,
 .card.bio-card.card-ar {
     display: flex;

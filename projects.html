@@ -43,12 +43,14 @@
                     <li><a href="#Solution">Solution</a></li>
                     <li><a href="#TechStack">Tech Stack</a></li>
                     <li><a href="#Contact">Contact</a></li>
-
                 </ul>
+                <div class="lang-switch mobile-only">
+                    <a href="projectsAR.html" class="btn-lang">العربية</a>
+                </div>
             </nav>
 
-            <div class="lang-switch">
-                    <a href="projectsAR.html"  class="btn-lang" >العربية</a>
+            <div class="lang-switch desktop-only">
+                <a href="projectsAR.html" class="btn-lang">العربية</a>
             </div>
 
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -184,7 +186,7 @@
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
-        // Initialize Lenis for smooth scrolling
+
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -204,7 +206,7 @@
 
         requestAnimationFrame(raf);
 
-    // Scroll Progress Bar
+
         window.addEventListener('scroll', () => {
             const scrollProgress = document.getElementById('scroll-progress');
             const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -215,7 +217,7 @@
             }
         });
 
-        // Mobile Hamburger Menu
+
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.querySelector('.nav-links');
         const overlay = document.getElementById('mobile-nav-overlay');

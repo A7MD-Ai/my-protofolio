@@ -23,11 +23,9 @@ async function sendMessage() {
     const question = input.value.trim();
     if (!question) return;
 
-    // عرض رسالة المستخدم
     addMessage(question, "user-msg");
     input.value = "";
 
-    // رسالة loading
     const loadingMsg = addMessage("...", "bot-msg");
 
     try {
@@ -41,10 +39,8 @@ async function sendMessage() {
 
         const data = await response.json();
 
-        // حذف loading
         loadingMsg.remove();
 
-        // عرض الرد
         addMessage(data.answer, "bot-msg");
 
     } catch (error) {
@@ -58,10 +54,7 @@ function addMessage(text, className) {
     const message = document.createElement("div");
     message.className = `message ${className}`;
     
-    // Parse markdown using marked.js if available
     if (typeof marked !== 'undefined') {
-        // Only parse as markdown if it's a bot message or we want user messages parsed too
-        // Usually, we want both parsed or just the bot. Let's parse all, or just let marked handle it.
         message.innerHTML = marked.parse(text);
     } else {
         message.textContent = text;
@@ -69,16 +62,13 @@ function addMessage(text, className) {
     
     chatMessages.appendChild(message);
 
-    // scroll لأسفل
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
     return message;
 }
 
-// زر الإرسال
 sendBtn.addEventListener("click", sendMessage);
 
-// Enter key
 input.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         sendMessage();

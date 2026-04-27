@@ -1,20 +1,20 @@
-/* Uses shared :root variables from style.css */
 
 
-/* --- Contact Section --- */
+
+
 .contact-section {
     padding: 100px 5%;
     font-family: 'Inter', sans-serif;
 }
 
-/* .section-title is defined in card.css */
 
 
-/* Contact Container - The Large Glass Card */
+
+
 .contact-container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Two column layout */
+    grid-template-columns: 1.2fr 0.8fr; 
     gap: 40px;
     padding: 50px;
     background: var(--card-bg);
@@ -24,7 +24,7 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Text Column */
+
 .contact-text h3 {
     font-size: 1.8rem;
     color: white;
@@ -51,7 +51,7 @@
     font-size: 1.2rem;
 }
 
-/* Contact Buttons Column */
+
 .contact-actions {
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
     z-index: 2;
 }
 
-/* Specific Button Colors */
+
 .social-btn.linkedin { background: #0077b5; }
 .social-btn.github { background: #24292e; border: 1px solid rgba(255,255,255,0.1); }
 .social-btn.email { background: #019aff; }
@@ -84,10 +84,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Footer Section --- */
+
 .main-footer {
     padding: 40px 20px;
-    background: #07090e; /* Slightly darker than section bg */
+    background: #07090e; 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-dim);
     font-family: 'Inter', sans-serif;
@@ -117,10 +117,10 @@
     color: var(--accent-cyan);
 }
 
-/* --- Responsive Adjustments --- */
+
 @media (max-width: 768px) {
     .contact-container {
-        grid-template-columns: 1fr; /* Stack on mobile */
+        grid-template-columns: 1fr; 
         padding: 30px;
         text-align: center;
     }

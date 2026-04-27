@@ -5,8 +5,8 @@
   overflow: hidden;
       padding: 30px 0;
   --speed: calc(var(--num-items) * 2s);
-  --item-width: 120px;   /* smaller for logos */
-  --item-gap: 60px;      /* spacing between logos */
+  --item-width: 120px;   
+  --item-gap: 60px;      
 
   --single-slide-speed: calc(var(--speed) / var(--num-items));
   --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
@@ -22,15 +22,15 @@
   width: max-content;
 }
 
-/* ✅ CLEAN LOGO STYLE (no cards) */
+
 .marquee-item {
   width: var(--item-width);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible; /* allow vertical growth */
+  overflow: visible; 
 
-  /* ❌ removed card styles */
+  
   border: none;
   border-radius: 0;
   background: none;
@@ -43,7 +43,7 @@
   animation-delay: calc(var(--single-slide-speed) * var(--item-position) * -1);
 }
 
-/* ✅ LOGO CONTROL */
+
 .marquee-item img,
 .marquee-item svg {
   width: 100%;
@@ -53,11 +53,11 @@
   opacity: 0.7;
   transition: all 0.3s ease;
 
-  /* 🔥 subtle glow */
+  
   filter: grayscale(1) opacity(0.6);
 }
 
-/* ✅ HOVER EFFECT */
+
 .marquee-item:hover img,
 .marquee-item:hover svg {
   transform: scale(1.1);
@@ -65,7 +65,7 @@
   filter: none;
 }
 
-/* ✅ ANIMATION */
+
 @keyframes marquee-move {
   from {
     transform: translateX(390%);
@@ -80,7 +80,7 @@
   overflow: hidden;
 }
 
-/* LEFT FADE */
+
 .fadeout-horizontal::before {
   content: "";
   position: absolute;
@@ -99,7 +99,7 @@
   );
 }
 
-/* RIGHT FADE (stronger like you wanted) */
+
 .fadeout-horizontal::after {
   content: "";
   position: absolute;
@@ -113,7 +113,7 @@
   background: linear-gradient(
     to left,
     #0b0f19 0%,
-    rgba(11, 15, 25, 0.95) 50%,  /* 🔥 stronger right fade */
+    rgba(11, 15, 25, 0.95) 50%,  
     rgba(11, 15, 25, 0.0) 100%
   );
 }
